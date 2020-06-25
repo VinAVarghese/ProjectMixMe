@@ -205,14 +205,27 @@
     bottom: 0;
     width: 100%
 }
-.bottom-menu a {
+.bottom-menu button {
     color: #fff;
     padding-top: 35px;
     padding-bottom: 35px;
     width: 25vw;
     text-align: center;
     border: #2c3840 outset ;
-}
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
+    
+.bottom-menu button:hover {
+     color: #fdec6e;
+      text-shadow:0px 0px 30px #fdec6e;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
 /* Footer Menu */
 .drinkPic {
     width: 150px !important;
@@ -220,8 +233,6 @@
 
 .fas {
   color: lightgrey;
-  font-size: x-large;
-  
-    text-shadow: 0px 2px 2px #fff, 0 0 0 #000, 1px 4px 6px transparent;    
-}
+  font-size: xx-large;
+  text-shadow: 0px 2px 2px #fff, 0 0 0 #000, 1px 4px 6px transparent;    
 }
