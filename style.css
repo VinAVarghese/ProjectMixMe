@@ -82,8 +82,9 @@
 
 /* Drink List Section */
 #product {
-    width: 100px;
+    width: 200px;
     height: auto;
+    border-radius: 50px;
 }
 .article-row-section {
     max-width: 75rem;
@@ -137,9 +138,9 @@
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-direction: column;
+    /* -webkit-flex-direction: column;
         -ms-flex-direction: column;
-            flex-direction: column;
+            flex-direction: column; */
     border-top: 1px solid #e6e6e6;
     padding: 1.5rem 0;
   }
@@ -150,33 +151,33 @@
               flex-direction: row;
     }
   }
-  .article-row-img img {
-    width: 100%;
-  }
+    .article-row-img img {
+        width: 100%;
+    }
   @media print, screen and (min-width: 40em) {
     .article-row-img img {
       max-width: none;
       width: auto;
     }
   }
-  .article-row-content {
-    padding: 1.5rem 0 0;
-    color: #0a0a0a;
-  } 
+    .article-row-content {
+        padding: 1.5rem 0 0;
+        color: #0a0a0a;
+    } 
   @media print, screen and (min-width: 40em) {
     .article-row-content {
       padding: 0 0 0 1.5rem;
     }
-  }
-  .article-row-content-description {
-    font-size: 1.25rem;
-  }
-  .article-row-reversed .article-row-content {
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2;
-    padding: 0 1.5rem 0 0;
-  }
+    }
+    .article-row-content-description {
+        font-size: 1.25rem;
+    }
+    .article-row-reversed .article-row-content {
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2;
+        padding: 0 1.5rem 0 0;
+    }
   .article-row-reversed .article-row-img {
     -webkit-order: 1;
         -ms-flex-order: 1;
@@ -197,6 +198,29 @@
   }
 
 /* Drink List Section */
+
+/* Single Drink Info Section */
+.drink-name {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.featured-drink {
+    width: 200px;
+    border-radius: 50px;
+  }
+.drink-info {
+padding: 40px;
+}
+/* Single Drink Info Section */
+
+/* Bottom Spacer */
+.bottom-spacer {
+    margin-bottom: 106px;
+    position: static;
+}
+/* Bottom Spacer */
 
 /* Footer Menu */
 .bottom-menu {
@@ -227,9 +251,6 @@
       transition: all 0.2s ease-in;
     }
 /* Footer Menu */
-.drinkPic {
-    width: 150px !important;
-}
 
 .fas {
   color: lightgrey;

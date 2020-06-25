@@ -31,7 +31,7 @@ $("#Btn").on("click", function() {
         newArticle.append(newDiv);
         var newImg = $("<img>");
         newImg.attr("src", response.drinks[i].strDrinkThumb);
-        newImg.attr("class", "drinkPic")
+        newImg.attr("id", "product")
         newDiv.append(newImg);
         var divTitle = $("<div>");
         divTitle.attr("class", `article-row-content ${[i]}`);
