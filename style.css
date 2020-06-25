@@ -38,15 +38,47 @@
 /* Hero Section */
   
 /* Delete once actual search bar and btn set up */
-  .hero-section .hero-section-text {
-    color: #fefefe;
-    text-shadow: 1px 1px 2px #0a0a0a;
-  }
-  #tempSearchBar, #Btn{
-    background-color: rgba(46, 46, 46, 0.502);
-    color: cyan;
-      }
-/* Delete once actual search bar and btn set up */
+
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 5px 5px 5px #0a0a0a;
+}
+.search-bar{
+  color: white;
+  border-radius: 10px;
+  outline: 1px solid black;
+}
+#mix-button{
+  align-items: center;
+  margin: 0;
+}
+#btnMixMe{
+  align-items: center;
+  padding: 10px 40px 10px 40px;
+  background-color: rgba(46, 46, 46, 0.502);
+  color: lightgrey;
+  text-shadow: 4px 4px 4px #0a0a0a;
+  font-size: 40px;
+  border: 1px solid #fefefe;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px #0a0a0a;
+  margin-left: 40%;
+}
+#btnMixMe:active{
+  background-color: rgba(46, 46, 46, 0.502);
+  color: 	lightgrey;
+  text-shadow: 4px 4px 4px #0a0a0a;
+  font-size: 40px;
+  border: 1px solid #fefefe;
+  border-radius: 10px;
+  text-shadow: 2px 2px 2px #0a0a0a;
+
+  padding: 10px 40px 10px 40px;
+ 
+
+}
+
 
 /* Drink List Section */
 #product {
@@ -164,6 +196,7 @@
               order: 2;
     }
   }
+
 /* Drink List Section */
 
 /* Single Drink Info Section */
@@ -196,15 +229,31 @@ padding: 40px;
     bottom: 0;
     width: 100%
 }
-.bottom-menu a {
+.bottom-menu button {
     color: #fff;
     padding-top: 35px;
     padding-bottom: 35px;
     width: 25vw;
     text-align: center;
     border: #2c3840 outset ;
-}
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
+    
+.bottom-menu button:hover {
+     color: #fdec6e;
+      text-shadow:0px 0px 30px #fdec6e;
+      -moz-transition: all 0.2s ease-in;
+      -o-transition: all 0.2s ease-in;
+      -webkit-transition: all 0.2s ease-in;
+      transition: all 0.2s ease-in;
+    }
 /* Footer Menu */
 
-
-  
+.fas {
+  color: lightgrey;
+  font-size: xx-large;
+  text-shadow: 0px 2px 2px #fff, 0 0 0 #000, 1px 4px 6px transparent;    
+}
