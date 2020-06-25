@@ -41,10 +41,11 @@
   .hero-section .hero-section-text {
     color: #fefefe;
     text-shadow: 1px 1px 2px #0a0a0a;
-}
-  #tempSearchBar, #tempSearchBtn{
-    background-color: rgba(46, 46, 46, 0.502)
-}
+  }
+  #tempSearchBar, #Btn{
+    background-color: rgba(46, 46, 46, 0.502);
+    color: cyan;
+      }
 /* Delete once actual search bar and btn set up */
 
 /* Drink List Section */
@@ -180,6 +181,9 @@
     border: #2c3840 outset ;
 }
 /* Footer Menu */
+.drinkPic {
+    width: 150px !important;
+}
 
 
   
