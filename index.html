@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MixMe</title>
   <!-- Links (top to bottom): Favicon, Foundation, CSSShake, Style1 -->
-  <link rel="icon" type="image/png" href="assets/imgs/favicon2.PNG" />
+  <link rel="icon" type="image/png" href="assets/imgs/favicon3.png" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake-rotate.css"
@@ -17,32 +17,28 @@
 <body>
   <!-- Header -->
   <div class="logo-header">
-    <a href="#"><img id="logo" src="assets/imgs/mmlogo_white.PNG" alt="" /></a>
+    <a href="#"><img id="logo" src="assets/imgs/mmlogo_white.PNG" alt="mix me logo"/></a>
   </div>
 
-  <!-- Spacer -->
+  <!-- Header Spacer -->
   <div class="spacer"></div>
 
   <!-- Hero Section -->
   <div class="hero-section heroSection">
     <div class="hero-section-text">
-      <h1 id="SearchBar">Your new favorite cocktail awaits!
-        <br>
-      </h1>
+      <h1>Your new favorite cocktail awaits!</h1>
       <form class="search-bar">
-        <input type="text" placeholder="Enter your favorite drink ingredient...">
+        <input type="text" placeholder="Enter an ingredient and let's mix...">
       </form>
-      <div id="mix-button">
-        <button class="shake-rotate" id="btnMixMe"><i class="fa fa-glass" aria-hidden="true"></i></button>
+      <div class="grid-x align-center">
+        <button class="shake-rotate" id="btnMixMe"><img id="mix-icon" src="assets/imgs/favicon3.png" alt="mix me icon"/></button>
       </div>
     </div>
-  </div>  
+  </div>
 
-
-  <!-- Area For Lists To Populate -->
+  <!-- Area For Drink List To Populate -->
   <div class="article-row-section">
     <div class="article-row-section-inner" id="container">
-      
     </div>
   </div>
 
@@ -65,13 +61,14 @@
           <li> Tumbler
         </ul>
         <h5>Instructions</h5>
-        <p class="instructions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere sem enim, accumsan
+        <p class="instructions">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin posuere sem enim,
+          accumsan
           convallis risus semper.</p>
       </div>
     </div>
   </div>
 
-  <!-- Spacer -->
+  <!-- Bottom Spacer -->
   <div class="bottom-spacer"></div>
 
   <!-- Fixed Footer Menu -->
@@ -83,11 +80,11 @@
   </div>
 
   <!-- Scripts (top to bottom): jQuery, Foundation, FontAwesome, Script1 -->
+  <script src="https://kit.fontawesome.com/106f23844d.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js"
     integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/106f23844d.js" crossorigin="anonymous"></script>
   <script src="script.js" type="text/javascript"></script>
   <script src="scriptZBD.js" type="text/javascript"></script>
 
