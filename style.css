@@ -27,6 +27,13 @@ body {
 }
 /* Logo Bar */
 
+
+/* Team Bio Images */ 
+.headshot {
+  max-width: 200px;
+  height: auto;
+  border-radius: 50px;
+}
 /* Hero Section */
 .hero-section {
   background: url("assets/imgs/john-fornander-4VYLNi0qeF8-unsplash.jpg") 50% no-repeat;
@@ -184,7 +191,10 @@ padding-top:85px;
   position: static;
 }
 /* Bottom Spacer */
-
+.footer-text{
+  font-size: 18px;
+  margin-left: 40%;
+}
 /* Footer Menu */
 .bottom-menu {  
   position: fixed;
@@ -204,6 +214,7 @@ padding-top:85px;
       -o-transition: all 0.2s ease-in;
       -webkit-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
+      
 }
   
 .bottom-menu button:hover {
