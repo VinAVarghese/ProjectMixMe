@@ -1,4 +1,11 @@
 
+.welcome {
+  color: #2c3840;
+  padding-top: 30px;
+  text-align: center;
+  font-family: 'Open sans', sans-serif;
+}
+
 .product-card {
     background-color: #2c38403f;
     border: 1px solid rgba(146, 254, 146, 0.283);
