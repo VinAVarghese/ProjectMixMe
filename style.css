@@ -1,83 +1,58 @@
 /* Logo Bar */
 .logo-header {
-    background:#2c3840 ;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  background:#2c3840 ;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 #logo{
-    width: 230px;
-    height: auto;
-    padding-top: 10px;
-    padding-bottom: 15px;
+  width: 230px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 15px;
 }
 .spacer {
-    margin-top: 106px;
-    position: static;
+  margin-top: 106px;
+  position: static;
 }
 /* Logo Bar */
 
 /* Hero Section */
 .hero-section {
-    background: url("assets/imgs/john-fornander-4VYLNi0qeF8-unsplash.jpg") 50% no-repeat;
-    background-size: cover;
-    height: 40vh;
-    text-align: center;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  background: url("assets/imgs/john-fornander-4VYLNi0qeF8-unsplash.jpg") 50% no-repeat;
+  background-size: cover;
+  height: 40vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-/* Hero Section */
-  
-/* Delete once actual search bar and btn set up */
-
-
 .hero-section .hero-section-text {
   color: #fefefe;
   text-shadow: 5px 5px 5px #0a0a0a;
 }
 .search-bar{
-  color: white;
-  border-radius: 10px;
-  outline: 1px solid black;
-}
-#mix-button{
-  align-items: center;
-  margin: 0;
+  outline: 1.5px solid #2c3840;
 }
 #btnMixMe{
-  align-items: center;
-  padding: 10px 40px 10px 40px;
+  padding: 5px 60px 5px 60px;
   background-color: rgba(46, 46, 46, 0.502);
-  color: lightgrey;
-  text-shadow: 4px 4px 4px #0a0a0a;
-  font-size: 40px;
   border: 1px solid #fefefe;
   border-radius: 10px;
-  text-shadow: 2px 2px 2px #0a0a0a;
-  margin-left: 40%;
 }
-#btnMixMe:active{
-  background-color: rgba(46, 46, 46, 0.502);
-  color: 	lightgrey;
-  text-shadow: 4px 4px 4px #0a0a0a;
-  font-size: 40px;
-  border: 1px solid #fefefe;
-  border-radius: 10px;
-  text-shadow: 2px 2px 2px #0a0a0a;
-
-  padding: 10px 40px 10px 40px;
- 
-
+#mix-icon{
+  width: 65px;
+  height: auto;
 }
+/* Hero Section */
 
 
 /* Drink List Section */
@@ -99,104 +74,76 @@
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  
+}
+
+.article-row-section-inner {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+  max-width: 100%;
+}
+
+@media print, screen and (min-width: 40em) {
   .article-row-section-inner {
-    -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
+@media print, screen and (min-width: 40em) {
+  .article-row-section-inner {
+    -webkit-flex: 0 0 83.33333%;
+        -ms-flex: 0 0 83.33333%;
+            flex: 0 0 83.33333%;
+    max-width: 83.33333%;
     padding-right: 0.625rem;
     padding-left: 0.625rem;
-    max-width: 100%;
+    max-width: 83.33333%;
   }
-  
-  @media print, screen and (min-width: 40em) {
-    .article-row-section-inner {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem;
-    }
+}
+@media print, screen and (min-width: 40em) and (min-width: 40em) {
+  .article-row-section-inner {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
   }
-  @media print, screen and (min-width: 40em) {
-    .article-row-section-inner {
-      -webkit-flex: 0 0 83.33333%;
-          -ms-flex: 0 0 83.33333%;
-              flex: 0 0 83.33333%;
-      max-width: 83.33333%;
-      padding-right: 0.625rem;
-      padding-left: 0.625rem;
-      max-width: 83.33333%;
-    }
-  }
-  @media print, screen and (min-width: 40em) and (min-width: 40em) {
-    .article-row-section-inner {
-      padding-right: 0.9375rem;
-      padding-left: 0.9375rem;
-    }
-  }
+}
+.article-row {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 1px solid #e6e6e6;
+  padding: 1.5rem 0;
+}
+@media print, screen and (min-width: 40em) {
   .article-row {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    /* -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; */
-    border-top: 1px solid #e6e6e6;
-    padding: 1.5rem 0;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
-  @media print, screen and (min-width: 40em) {
-    .article-row {
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-    }
+}
+  .article-row-img img {
+      width: 100%;
   }
-    .article-row-img img {
-        width: 100%;
-    }
-  @media print, screen and (min-width: 40em) {
-    .article-row-img img {
-      max-width: none;
-      width: auto;
-    }
+@media print, screen and (min-width: 40em) {
+  .article-row-img img {
+    max-width: none;
+    width: auto;
   }
-    .article-row-content {
-        padding: 1.5rem 0 0;
-        color: #0a0a0a;
-    } 
-  @media print, screen and (min-width: 40em) {
-    .article-row-content {
-      padding: 0 0 0 1.5rem;
-    }
-    }
-    .article-row-content-description {
-        font-size: 1.25rem;
-    }
-    .article-row-reversed .article-row-content {
-        -webkit-order: 2;
-            -ms-flex-order: 2;
-                order: 2;
-        padding: 0 1.5rem 0 0;
-    }
-  .article-row-reversed .article-row-img {
-    -webkit-order: 1;
-        -ms-flex-order: 1;
-            order: 1;
-    padding: 0 0 1.5rem 0;
+}
+  .article-row-content {
+      padding: 1.5rem 0 0;
+      color: #0a0a0a;
+  } 
+@media print, screen and (min-width: 40em) {
+  .article-row-content {
+    padding: 0 0 0 1.5rem;
   }
-  @media print, screen and (min-width: 40em) {
-    .article-row-reversed .article-row-content {
-      -webkit-order: 1;
-          -ms-flex-order: 1;
-              order: 1;
-    }
-    .article-row-reversed .article-row-img {
-      -webkit-order: 2;
-          -ms-flex-order: 2;
-              order: 2;
-    }
   }
-
+  .article-row-content-description {
+      font-size: 1.25rem;
+  }
 /* Drink List Section */
 
 /* Single Drink Info Section */
@@ -240,20 +187,14 @@ padding: 40px;
       -o-transition: all 0.2s ease-in;
       -webkit-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
-    }
-    
-.bottom-menu button:hover {
-     color: #fdec6e;
-      text-shadow:0px 0px 30px #fdec6e;
-      -moz-transition: all 0.2s ease-in;
-      -o-transition: all 0.2s ease-in;
-      -webkit-transition: all 0.2s ease-in;
-      transition: all 0.2s ease-in;
-    }
-/* Footer Menu */
-
-.fas {
-  color: lightgrey;
-  font-size: xx-large;
-  text-shadow: 0px 2px 2px #fff, 0 0 0 #000, 1px 4px 6px transparent;    
 }
+  
+.bottom-menu button:hover {
+  color: #fdec6e;
+  text-shadow:0px 0px 30px #fdec6e;
+  -moz-transition: all 0.2s ease-in;
+  -o-transition: all 0.2s ease-in;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+}
+/* Footer Menu */
