@@ -1,3 +1,10 @@
+/* Body Background */
+body {
+  background-color: #fefefe;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%232c3840' fill-opacity='0.06' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+}
+/* Body Background */
+
 /* Logo Bar */
 .logo-header {
   background:#2c3840 ;
@@ -38,10 +45,14 @@
 }
 .hero-section .hero-section-text {
   color: #fefefe;
-  text-shadow: 4px 4px 4px #0a0a0a;
+  text-shadow: 4px 4px 4px #2c3840;
 }
 .search-bar{
   outline: 1.5px solid #2c3840;
+  width: 55vw;
+}
+.search-bar input{
+  background-color: #fefefe;
 }
 #btnMixMe{
   padding: 5px 60px 5px 60px;
@@ -52,6 +63,12 @@
 #mix-icon{
   width: 65px;
   height: auto;
+}
+@media print, screen and (max-width: 40em) {
+  .search-bar{
+    outline: 1.5px solid #2c3840;
+    width: 80vw;
+  }
 }
 /* Hero Section */
 
@@ -142,7 +159,6 @@
     padding: 0 0 0 1.5rem;
   }
 }
-
 /* Drink List Section */
 
 /* Single Drink Info Section */

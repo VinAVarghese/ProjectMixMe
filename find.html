@@ -5,21 +5,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MixMe - Locate</title>
-  <!-- Links (top to bottom): Favicon, Foundation, Style1 -->
-  <link rel="icon" type="image/png" href="assets/imgs/favicon2.PNG" />
+  <!-- Links (top to bottom): Favicon, FontAwesome, Foundation, CSSShake, Style1 -->
+  <link rel="icon" type="image/png" href="assets/imgs/favicon3.png" />
+  <script src="https://kit.fontawesome.com/106f23844d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
     integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake-rotate.css"
+    integrity="sha256-qb6RbQjtL5q6WnEFeCFmf2PI6e3IJ1Fxsaii8QOZM8Y=" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
+</head>
 </head>
 
 <body>
   <!-- Header -->
   <div class="logo-header">
-    <a href="#"><img id="logo" src="assets/imgs/mmlogo_white.PNG" alt="" /></a>
+    <a href="#"><img id="logo" src="assets/imgs/mmlogo_white.PNG" alt="mix me logo"/></a>
   </div>
 
-  <!-- Spacer -->
+  <!-- Header Spacer -->
   <div class="spacer"></div>
+
+  <!-- Hero Section -->
+  <div class="hero-section heroSection">
+    <div class="hero-section-text">
+      <!-- <h1>Your new favorite cocktail awaits!</h1> -->
+      <form class="search-bar">
+        <input id="tempSearchBar" type="text" placeholder="Enter Your City...">
+      </form>
+      <div class="grid-x align-center">
+        <button class="shake-rotate" id="btnMixMe"><img id="mix-icon" src="assets/imgs/favicon3.png" alt="mix me icon"/></button>
+      </div>
+    </div>
+  </div>
 
   <!-- Location List Section -->
   <div class="article-row-section">
@@ -27,18 +44,16 @@
     </div>
   </div>
 
+  <!-- Bottom Spacer -->
+  <div class="bottom-spacer"></div>
+
   <!-- Fixed Footer Menu -->
-  <div class="bottom-menu row expanded">
-    <div class="columns text-center">
-      <ul class="menu align-center">
-        <li><a href="">Button</a></li>
-        <li><a href="">Button</a></li>
-        <li><a href="">Button</a></li>
-        <li><a href="">Button</a></li>
-      </ul>
-    </div>
-  </div>  
-  <!-- Fixed Footer Menu -->
+  <div class="bottom-menu grid-x">
+    <button href=""><i class="fas fa-map-marker-alt fa-2x"></i></button>
+    <button href=""><i class="fas fa-search fa-2x"> </i></button>
+    <button href=""><i class="fas fa-gamepad fa-2x"></i></button>
+    <button href=""><i class="fas fa-book-open fa-2x"></i></button>
+  </div>
 
   <!-- Scripts (top to bottom): jQuery, Foundation, Script1 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"

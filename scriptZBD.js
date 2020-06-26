@@ -27,7 +27,7 @@ $("#btnMixMe").on("click", function () {
             clickPic.append(newArticle);
             newDiv.append(clickPic)
             var newDiv = $("<div>");
-            newDiv.attr("class", "article-row-img");
+            newDiv.attr("class", "article-row-img grid-x align-center");
             newArticle.append(newDiv);
             var newImg = $("<img>");
             newImg.attr("src", response.drinks[i].strDrinkThumb);
@@ -65,7 +65,7 @@ $("#btnMixMe").on("click", function () {
                     newerArticle.attr("class", `article-row grid-y`);
                     $("#container").append(newerArticle);
                     var newerDiv = $("<div>");
-                    newerDiv.attr("class", "article-row-img")
+                    newerDiv.attr("class", "article-row-img grid-x align-center")
                     newerArticle.append(newerDiv);
                     var newerImg = $("<img>");
                     newerImg.attr("src", data.drinks[0].strDrinkThumb);
