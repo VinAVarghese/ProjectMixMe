@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MixMe - Library</title>
+  <title>Library</title>
   <!-- Links (top to bottom): Favicon, Foundation, Style1 -->
   <link rel="icon" type="image/png" href="assets/imgs/favicon3.png" />
   <script src="https://kit.fontawesome.com/106f23844d.js" crossorigin="anonymous"></script>
@@ -19,15 +19,17 @@
 <body>
   <!-- Header -->
   <div class="logo-header">
-    <a href="#"><img id="logo" src="assets/imgs/mmlogo_white.PNG" alt="mix me logo"/></a>
+    <a href="index.html"><img id="logo" src="assets/imgs/mmlogo_white.PNG" alt="mix me logo"/></a>
   </div>
 
   <!-- Header Spacer -->
   <div class="spacer"></div>
 
+  <!-- Welcome! -->
+  <h1 class="welcome"> Browse the drink menu!</h1>
+
   <!-- Library Of Drinks Section -->
   <div class="grid-x align-center">
-
     <div class="product-card">
       <div class="product-card-thumbnail">
         <a href="#"><img src="assets/imgs/mae-mu-YNMjGIPgD_c-unsplash.jpg"/></a>
@@ -40,18 +42,20 @@
         <li></li>
       </ul>
     </div>   
-
   </div>
-
+<!-- "Meet the Team" link -- Vinny needs to center using Momentum  -->
+<div class="footer-text"></div>
+  <a href="teambio.html">Meet the MixMe team</a> 
+</div> 
   <!-- Bottom Spacer -->
   <div class="bottom-spacer"></div>
 
   <!-- Fixed Footer Menu -->
   <div class="bottom-menu grid-x">
-    <button href=""><i class="fas fa-map-marker-alt fa-2x"></i></button>
-    <button href=""><i class="fas fa-search fa-2x"> </i></button>
-    <button href=""><i class="fas fa-gamepad fa-2x"></i></button>
-    <button href=""><i class="fas fa-book-open fa-2x"></i></button>
+    <form action="find.html"><button class="fas fa-map-marker-alt fa-2x"></button></form>
+    <form action="index.html"><button class="fas fa-search fa-2x"> </button></form>
+    <form action="learn.html"><button class="fas fa-gamepad fa-2x"></button></form>
+    <form action="library.html"><button class="fas fa-book-open fa-2x"></button></form>
   </div>
 
   <!-- Scripts (top to bottom): jQuery, Foundation, Script1 -->
