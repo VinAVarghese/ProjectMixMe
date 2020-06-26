@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MixMe - Locate</title>
+  <title>Locate</title>
   <!-- Links (top to bottom): Favicon, FontAwesome, Foundation, CSSShake, Style1 -->
   <link rel="icon" type="image/png" href="assets/imgs/favicon3.png" />
   <script src="https://kit.fontawesome.com/106f23844d.js" crossorigin="anonymous"></script>
@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake-rotate.css"
     integrity="sha256-qb6RbQjtL5q6WnEFeCFmf2PI6e3IJ1Fxsaii8QOZM8Y=" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style_find.css">
 </head>
 </head>
 
@@ -33,14 +34,51 @@
         <input id="tempSearchBar" type="text" placeholder="Enter Your City...">
       </form>
       <div class="grid-x align-center">
-        <button class="shake-rotate" id="btnMixMe"><img id="mix-icon" src="assets/imgs/favicon3.png" alt="mix me icon"/></button>
+        <button class="shake-rotate" id="btnMixMe"><img id="mix-icon" src="assets/imgs/favicon3.png"
+            alt="mix me icon" /></button>
       </div>
     </div>
   </div>
 
-  <!-- Location List Section -->
-  <div class="article-row-section">
-    <div class="article-row-section-inner" id="container">
+  <!-- Location Instructions -->
+  <div>
+    <div class="grid-x grid-y align-center">
+      <div class="grid-y column drink-name">
+        <img class="zomato-logo" src="assets/imgs/zomato.png">
+      </div>
+      <div class="grid-x align-center">
+        <div class="zomato-info small-6">
+          <h5 class="locator">Our Locator</h5>
+          <p class="instructions">Our locator uses a curated Zomato collection to find the best resturants and bars near
+            you so you can try a drink you've found mixed locally in your city!</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bar List Section -->
+  <div>
+    <div class="grid-x align-center">
+      <div class="grid-y column drink-name">
+        <h3 class="drinkName">Vin's Pub</h3>
+        <a href="">
+          <img class="featured-drink" src="assets/imgs/comingsoon.png">
+        </a>
+      </div>
+      <div class="drink-info">
+        <h5>Address</h5>
+        <div class="ingredients">
+          <p>14 Skyview Court Queens, NY 11423 </p>
+        </div>
+        <h5>Phone</h5>
+        <div class="ingredients">
+          <p> 516 - 052 - 2653 </p>
+        </div>
+        <h5>Hours</h5>
+        <p class="instructions">12:00pm - 1:00am</p>
+        <h5>Cusine</h5>
+        <p class="instructions">American Pub Food</p>
+      </div>
     </div>
   </div>
 
