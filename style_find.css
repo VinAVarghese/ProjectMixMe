@@ -1,0 +1,22 @@
+/* Our Locator Title */
+.locator {
+    font-weight: bold;
+}
+/* Our Locator Title */
+
+/* Bar List Section */
+.drink-name {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+.featured-drink {
+width: 200px;
+border-radius: 50px;
+}
+.drink-info {
+padding: 40px;
+padding-top:85px;
+}
+/* Bar List Section */
