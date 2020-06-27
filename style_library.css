@@ -6,12 +6,16 @@
   font-family: 'Open sans', sans-serif;
 }
 
+.letter-links {
+  text-align: center;
+}
+
 .product-card {
-    background-color: #2c38403f;
-    border: 1px solid rgba(146, 254, 146, 0.283);
-    padding: 1rem;
-    margin: 1.5rem;
-  }
+  background-color: #2c38403f;
+  border: 1px solid rgba(146, 254, 146, 0.283);
+  padding: 1rem;
+  margin: 1.5rem;
+}
 
 .product-card-thumbnail {
 display: block;
@@ -34,6 +38,7 @@ margin-bottom: 0;
 display: block;
 font-family: 'Open sans', sans-serif;
 font-size: 0.85rem;
+font-weight: bold;
 }
 
 .product-ul {

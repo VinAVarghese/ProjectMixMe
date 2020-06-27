@@ -3,7 +3,7 @@ var drinkArray = [];
 
 pageLoad();
 
-$("#btnMixMe").on("click", function () {
+$("#btnMixMe").on("click submit", function () {
     divArray = [];
     drinkArray = [];
     $("#container").empty();
