@@ -128,10 +128,22 @@ $("#btnMixMe").on("click submit", function () {
                 method: "GET"
             }).then(function (data) {
                 //console.log(data);
-                var newP = $("<p>");
-                newP.attr("class", `article-row-content-description`);
-                newP.text(data.drinks[0].strInstructions);
-                (divArray[num]).append(newP);
+                var lastUl = $("<ul>");
+                lastUl.attr("class", "ingredients");
+                for (var i = 1; i < 16; i++) {
+    
+                    if (data.drinks[0][`strIngredient${i}`]) {
+                        var measure = ""
+                        if(data.drinks[0][`strMeasure${i}`]) {
+                            measure=data.drinks[0][`strMeasure${i}`]
+                        } 
+                    var lastLi = $("<li>");
+                    lastLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
+                    lastUl.append(lastLi);
+                    }
+                }
+                (divArray[num]).append(lastUl);
+
             });
         }
         for (let i = 0; i < 10; i++) {
@@ -171,7 +183,7 @@ function pageLoad() {
         newUl.attr("class", "ingredients");
         drinkInfoDiv.append(newUl);
         var newLi = $("<li>");
-        newLi.text(data.drinks[0].strIngredient1 + data.drinks[0].strMeasure1);
+        newLi.text(data.drinks[0].strMeasure1 + " " + data.drinks[0].strIngredient1);
         newUl.append(newLi);
         for (var i = 2; i < 16; i++) {
             if (data.drinks[0][`strIngredient${i}`]) {
@@ -180,7 +192,7 @@ function pageLoad() {
                     measure=data.drinks[0][`strMeasure${i}`]
                 } 
             var newLi = $("<li>");
-            newLi.text(data.drinks[0][`strIngredient${i}`] + " " + measure);
+            newLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
             newUl.append(newLi);
             }
         }                  
