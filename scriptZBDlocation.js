@@ -40,6 +40,7 @@ $("#tempSearchBar").keyup(function(){
                 var div2 = $("<div>");
                 div2.attr("class", "drink-name medium-3");
                 newDiv.append(div2);
+                newDiv.append(clickPic);
                 var newImg = $("<img>");
                 if (data.restaurants[i].restaurant.thumb !== "") {
                 newImg.attr("src", data.restaurants[i].restaurant.thumb);
@@ -137,22 +138,19 @@ $("#btnMixMe").on("click", function () {
             $("#tempSearchBar").attr("class", "error");
             $("#tempSearchBar").val("Not a valid ingredient, please try again")
            }  
-          for (var i = 0; i < 10; i++) {
+        for (var i = 0; i < 10; i++) {
+            var clickPic = $("<a>");
+            clickPic.attr("class", "clickable")
+            clickPic.attr("target", "_blank")
+            clickPic.attr("href", data.restaurants[i].restaurant.url)
             var newDiv = $("<div>");
             newDiv.attr("class", "grid-x align-center")
             $("#container").append(newDiv);
             var div2 = $("<div>");
-            div2.attr("class", "grid-y column drink-name");
+            div2.attr("class", "drink-name medium-3");
             newDiv.append(div2);
-            var clickPic = $("<a>");
-            clickPic.attr("class", "clickable")
-            clickPic.attr("src", data.restaurants[i].restaurant.url)
             // clickPic.append(newDiv);
             newDiv.append(clickPic)
-            var newH3 = $("<h3>");
-            newH3.attr("class", "article-row-content-header");
-            newH3.text(data.restaurants[i].restaurant.name);
-            div2.append(newH3);
             var newImg = $("<img>");
             if (data.restaurants[i].restaurant.thumb !== "") {
             newImg.attr("src", data.restaurants[i].restaurant.thumb);
@@ -164,8 +162,13 @@ $("#btnMixMe").on("click", function () {
             div2.append(newImg);
             }
             var divContainer = $("<div>");
-            divContainer.attr("class", "drink-info");
+            divContainer.attr("class", "drink-info medium-3");
             newDiv.append(divContainer);
+            var newH3 = $("<h3>");
+            newH3.attr("class", "article-row-content-header");
+            newH3.text(data.restaurants[i].restaurant.name);
+            clickPic.append(newH3);
+            divContainer.append(clickPic);
             var newH5 = $("<h5>");
             newH5.text("Address:")
             divContainer.append(newH5);
@@ -175,15 +178,12 @@ $("#btnMixMe").on("click", function () {
             var pOne = $("<p>");
             pOne.text(data.restaurants[i].restaurant.location.address);
             div4.append(pOne);
-            var div3 = $("<div>");
-            div2.attr("class", "ingredients");
-            divContainer.append(div3);
             var nextH5 =  $("<h5>");
             nextH5.text("Phone:");
-            div2.append(nextH5)
+            divContainer.append(nextH5)
             var newP = $("<p>");
             newP.text(data.restaurants[i].restaurant.phone_numbers);
-            div2.append(newP);
+            divContainer.append(newP);
             var hoursH5 = $("<h5>");
             hoursH5.text("Hours:");
             divContainer.append(hoursH5);
