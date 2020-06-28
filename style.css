@@ -146,9 +146,11 @@ body {
             flex-direction: row;
   }
 }
-@media print, screen and (min-width: 40em) {
+@media print, screen and (max-width: 40em) {
   .article-row-img img {
-    width: 200px;
+    display:block;
+    max-width: 200px;
+    max-height: 200px;
   }
 }
 @media print, screen and (min-width: 40em) {
