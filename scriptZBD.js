@@ -19,7 +19,12 @@ $("#tempSearchBar").keyup(function(){
                 method: "GET"
             }).then(function (response) {
                 //  console.log(response);
-                for (var i = 0; i < 10; i++) {
+                if (response == "") {
+                    $("#tempSearchBar").val("Not a valid ingredient, please try again")
+                    $("#tempSearchBar").attr("class", "error");
+                   }  else 
+                   $("#tempSearchBar").attr("class", "errorFix");
+                for (var i = 0; i < response.drinks.length; i++) {
                     var newDiv = $("<div>");
                     $("#container").append(newDiv);
                     var newArticle = $("<article>");
@@ -148,7 +153,7 @@ $("#tempSearchBar").keyup(function(){
         
                     });
                 }
-                for (let i = 0; i < 10; i++) {
+                for (let i = 0; i < drinkArray.length; i++) {
                     getInstructions(drinkArray[i], [i]);
                 }
             });
@@ -175,8 +180,13 @@ $("#btnMixMe").on("click submit", function search() {
         url: queryURL,
         method: "GET"
     }).then(function (response) {
-        //  console.log(response);
-        for (var i = 0; i < 10; i++) {
+         console.log(response);
+       if (response == "") {
+        $("#tempSearchBar").val("Not a valid ingredient, please try again")
+        $("#tempSearchBar").attr("class", "error");
+    }  else 
+        $("#tempSearchBar").attr("class", "errorFix");
+            for (var i = 0; i < response.drinks.length; i++) {
             var newDiv = $("<div>");
             $("#container").append(newDiv);
             var newArticle = $("<article>");
@@ -200,11 +210,11 @@ $("#btnMixMe").on("click submit", function search() {
             newH3.attr("class", "article-row-content-header");
             newH3.text(response.drinks[i].strDrink);
             divTitle.append(newH3);
-
             divArray.push(divTitle);
-
             var drinkId = response.drinks[i].idDrink;
+            // console.log(drinkId);
             drinkArray.push(drinkId)
+              
             // console.log(drinkId);
         }
         $(".clickable").on("click", function () {
@@ -246,7 +256,7 @@ $("#btnMixMe").on("click submit", function search() {
                     newUl.attr("class", "ingredients");
                     drinkInfoDiv.append(newUl);
                     var newLi = $("<li>");
-                    newLi.text(data.drinks[0].strIngredient1 + data.drinks[0].strMeasure1);
+                    newLi.text(data.drinks[0].strMeasure1 + " " + data.drinks[0].strIngredient1);
                     newUl.append(newLi);
                     for (var i = 2; i < 16; i++) {
                         if (data.drinks[0][`strIngredient${i}`]) {
@@ -305,7 +315,7 @@ $("#btnMixMe").on("click submit", function search() {
 
             });
         }
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < drinkArray.length; i++) {
             getInstructions(drinkArray[i], [i]);
         }
     });

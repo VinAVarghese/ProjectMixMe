@@ -225,4 +225,12 @@ padding: 40px;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
+.error {
+  border: 5px solid red;
+  color: red;
+}
+.errorFix {
+  color: black;
+  border: none;
+}
 /* Footer Menu */
