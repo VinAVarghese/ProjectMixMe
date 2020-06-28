@@ -157,8 +157,9 @@ body {
 }
 @media print, screen and (min-width: 40em) {
   .article-row-img img {
-    max-width: none;
-    width: auto;
+    min-width: 200px;
+    max-width: 200px;
+    height: auto;
   }
 }
 @media print, screen and (min-width: 40em) {
@@ -175,13 +176,17 @@ body {
   align-items: center;
   justify-content: center;
 } 
+.drink-name h3 {
+  padding-bottom: 40px;
+  color: #2c3840;
+}
 .featured-drink {
   width: 200px;
   border-radius: 50px;
+  margin-bottom: 20px;
 }
 .drink-info {
 padding: 40px;
-padding-top:85px;
 }
 /* Single Drink Info Section */
 
@@ -191,10 +196,7 @@ padding-top:85px;
   position: static;
 }
 /* Bottom Spacer */
-.footer-text{
-  font-size: 18px;
-  margin-left: 40%;
-}
+
 /* Footer Menu */
 .bottom-menu {  
   position: fixed;
@@ -214,9 +216,7 @@ padding-top:85px;
       -o-transition: all 0.2s ease-in;
       -webkit-transition: all 0.2s ease-in;
       transition: all 0.2s ease-in;
-      
 }
-  
 .bottom-menu button:hover {
   color: rgb(146, 254, 146);
   text-shadow:0px 0px 30px whitesmoke;

@@ -1,5 +1,6 @@
 var divArray = [];
 var drinkArray = [];
+var meetMixMe = $(".meetMixMe")
 
 pageLoad();
 
@@ -165,6 +166,7 @@ $("#btnMixMe").on("click submit", function search() {
     drinkArray = [];
     $("#container").empty();
     $("#container2").empty();
+    $(meetMixMe).empty();
     var ingredient = $("#tempSearchBar").val().trim();
     var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" +
         ingredient;
@@ -219,24 +221,24 @@ $("#btnMixMe").on("click submit", function search() {
                     drinkArray = [];
                     $("#container").empty();
                     $("#container2").empty();
-                    console.log(data);
+                    // console.log(data);
                     var newerDiv = $("<div>");
                     newerDiv.attr("class", "grid-x align-center")
                     $("#container2").append(newerDiv);
+                    var drinkInfoDiv = $("<div>");
+                    drinkInfoDiv.attr("class", "medium-6 drink-info");
+                    newerDiv.append(drinkInfoDiv);
                     var secondDiv = $("<div>");
-                    secondDiv.attr("class", "grid-y column drink-name");
-                    newerDiv.append(secondDiv);
-                    var newerH3 = $("<h3>");
-                    newerH3.attr("class", "drinkName");
-                    newerH3.text(data.drinks[0].strDrink);
-                    secondDiv.append(newerH3);
+                    secondDiv.attr("class", "drink-name");
+                    drinkInfoDiv.append(secondDiv);
                     var newerImg = $("<img>");
                     newerImg.attr("src", data.drinks[0].strDrinkThumb);
                     newerImg.attr("class", "featured-drink")
                     secondDiv.append(newerImg);
-                    var drinkInfoDiv = $("<div>");
-                    drinkInfoDiv.attr("class", "drink-info");
-                    newerDiv.append(drinkInfoDiv);
+                    var newerH3 = $("<h3>");
+                    newerH3.attr("class", "drinkName");
+                    newerH3.text(data.drinks[0].strDrink);
+                    drinkInfoDiv.append(newerH3);
                     var newH5 = $("<h5>");
                     newH5.text("Ingredients:");
                     drinkInfoDiv.append(newH5);
@@ -249,14 +251,14 @@ $("#btnMixMe").on("click submit", function search() {
                     for (var i = 2; i < 16; i++) {
                         if (data.drinks[0][`strIngredient${i}`]) {
                             var measure = ""
-                            if(data.drinks[0][`strMeasure${i}`]) {
-                                measure=data.drinks[0][`strMeasure${i}`]
-                            } 
-                        var newLi = $("<li>");
-                        newLi.text(data.drinks[0][`strIngredient${i}`] + " " + measure);
-                        newUl.append(newLi);
+                            if (data.drinks[0][`strMeasure${i}`]) {
+                                measure = data.drinks[0][`strMeasure${i}`]
+                            }
+                            var newLi = $("<li>");
+                            newLi.text(data.drinks[0][`strIngredient${i}`] + " " + measure);
+                            newUl.append(newLi);
                         }
-                    }                  
+                    }
                     var newerH5 = $("<h5>");
                     newerH5.text("Glass typically used:");
                     drinkInfoDiv.append(newerH5);
@@ -288,15 +290,15 @@ $("#btnMixMe").on("click submit", function search() {
                 var lastUl = $("<ul>");
                 lastUl.attr("class", "ingredients");
                 for (var i = 1; i < 16; i++) {
-    
+
                     if (data.drinks[0][`strIngredient${i}`]) {
                         var measure = ""
-                        if(data.drinks[0][`strMeasure${i}`]) {
-                            measure=data.drinks[0][`strMeasure${i}`]
-                        } 
-                    var lastLi = $("<li>");
-                    lastLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
-                    lastUl.append(lastLi);
+                        if (data.drinks[0][`strMeasure${i}`]) {
+                            measure = data.drinks[0][`strMeasure${i}`]
+                        }
+                        var lastLi = $("<li>");
+                        lastLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
+                        lastUl.append(lastLi);
                     }
                 }
                 (divArray[num]).append(lastUl);
@@ -320,20 +322,23 @@ function pageLoad() {
         var newerDiv = $("<div>");
         newerDiv.attr("class", "grid-x align-center")
         $("#container2").append(newerDiv);
+        var drinkInfoDiv = $("<div>");
+        drinkInfoDiv.attr("class", "medium-6 drink-info");
+        newerDiv.append(drinkInfoDiv);
         var secondDiv = $("<div>");
-        secondDiv.attr("class", "grid-y column drink-name");
-        newerDiv.append(secondDiv);
-        var newerH3 = $("<h3>");
-        newerH3.attr("class", "drinkName");
-        newerH3.text(data.drinks[0].strDrink);
-        secondDiv.append(newerH3);
+        secondDiv.attr("class", "grid-y drink-name");
+        drinkInfoDiv.append(secondDiv);
+        var randomH3 = $("<h3>")
+        randomH3.text("Enjoy A Random Mix!")
+        secondDiv.prepend(randomH3)
         var newerImg = $("<img>");
         newerImg.attr("src", data.drinks[0].strDrinkThumb);
         newerImg.attr("class", "featured-drink")
         secondDiv.append(newerImg);
-        var drinkInfoDiv = $("<div>");
-        drinkInfoDiv.attr("class", "drink-info");
-        newerDiv.append(drinkInfoDiv);
+        var newerH3 = $("<h3>");
+        newerH3.attr("class", "drinkName");
+        newerH3.text(data.drinks[0].strDrink);
+        drinkInfoDiv.append(newerH3);
         var newH5 = $("<h5>");
         newH5.text("Ingredients:");
         drinkInfoDiv.append(newH5);
@@ -346,14 +351,14 @@ function pageLoad() {
         for (var i = 2; i < 16; i++) {
             if (data.drinks[0][`strIngredient${i}`]) {
                 var measure = ""
-                if(data.drinks[0][`strMeasure${i}`]) {
-                    measure=data.drinks[0][`strMeasure${i}`]
-                } 
-            var newLi = $("<li>");
-            newLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
-            newUl.append(newLi);
+                if (data.drinks[0][`strMeasure${i}`]) {
+                    measure = data.drinks[0][`strMeasure${i}`]
+                }
+                var newLi = $("<li>");
+                newLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
+                newUl.append(newLi);
             }
-        }                  
+        }
         var newerH5 = $("<h5>");
         newerH5.text("Glass typically used:");
         drinkInfoDiv.append(newerH5);
