@@ -6,13 +6,16 @@
 @media print, screen and (max-width: 40em) {
     .headshot {
         display:block;
-        max-height: 200px;
+        max-height: 300px;
+        max-width: 200px;
     }
 }
+
 .vinheadshot {
     width: 200px;
     border-radius: 50px;
 }
+
 @media print, screen and (max-width: 40em) {
     .vinheadshot {
         display:block;
