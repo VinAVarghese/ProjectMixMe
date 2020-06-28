@@ -10,9 +10,21 @@
   text-align: center;
 }
 
+.drink-info {
+  border: 2px solid #2c3840;
+  border-radius: 10px;
+  background-color: #2c38403f;
+}
+
+.one-of-many {
+  margin-top: 0px;
+  text-decoration: underline;
+}
+
 .product-card {
   background-color: #2c38403f;
-  border: 1px solid rgba(146, 254, 146, 0.283);
+  border: 1px solid #2c3840;
+  border-radius: 10px;
   padding: 1rem;
   margin: 1.5rem;
 }
