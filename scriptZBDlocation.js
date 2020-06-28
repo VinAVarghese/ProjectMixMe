@@ -12,6 +12,13 @@ $("#tempSearchBar").keyup(function(){
             url: cityUrl,
             method: "GET",
         }).then(function(response) {
+            console.log(response)
+            if (response.location_suggestions.length == 0) {
+                $("#tempSearchBar").val("Not a valid city, please try again")
+                $("#tempSearchBar").attr("class", "error");
+               }  else 
+               $("#tempSearchBar").attr("class", "errorFix");
+
             var cityId = response.location_suggestions[0].id;
             var apiKey = "280fa1637c0958e223d90cbe4eba1bf8";
             var finalUrl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityId + "&entity_type=city&collection_id=432&sort=rating&apikey=" + apiKey;
@@ -113,6 +120,11 @@ $("#btnMixMe").on("click", function () {
         url: cityUrl,
         method: "GET",
     }).then(function(response) {
+        if (response.location_suggestions.length == 0) {
+            $("#tempSearchBar").val("Not a valid city, please try again")
+            $("#tempSearchBar").attr("class", "error");
+        }  else 
+        $("#tempSearchBar").attr("class", "errorFix");
         var cityId = response.location_suggestions[0].id;
         var apiKey = "280fa1637c0958e223d90cbe4eba1bf8";
         var finalUrl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityId + "&entity_type=city&collection_id=432&sort=rating&apikey=" + apiKey;
@@ -122,6 +134,10 @@ $("#btnMixMe").on("click", function () {
             method: "GET",
         }).then(function(data) {
         console.log(data);
+        if (data == "") {
+            $("#tempSearchBar").attr("class", "error");
+            $("#tempSearchBar").val("Not a valid ingredient, please try again")
+           }  
         for (var i = 0; i < 10; i++) {
             var clickPic = $("<a>");
             clickPic.attr("class", "clickable")
