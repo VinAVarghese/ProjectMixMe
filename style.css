@@ -146,9 +146,11 @@ body {
             flex-direction: row;
   }
 }
-@media print, screen and (min-width: 40em) {
+@media print, screen and (max-width: 40em) {
   .article-row-img img {
-    width: 200px;
+    display:block;
+    max-width: 200px;
+    max-height: 200px;
   }
 }
 @media print, screen and (min-width: 40em) {
@@ -229,5 +231,13 @@ padding: 40px;
   -o-transition: all 0.2s ease-in;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
+}
+.error {
+  border: 5px solid red;
+  color: red;
+}
+.errorFix {
+  color: black;
+  border: none;
 }
 /* Footer Menu */
