@@ -107,20 +107,20 @@ function getInstructions(num) {
         var newerDiv = $("<div>");
         newerDiv.attr("class", "grid-x align-center")
         $(singleDrink).append(newerDiv);
+        var drinkInfoDiv = $("<div>");
+        drinkInfoDiv.attr("class", "drink-info");
+        newerDiv.append(drinkInfoDiv);
         var secondDiv = $("<div>");
-        secondDiv.attr("class", "grid-y column drink-name");
-        newerDiv.append(secondDiv);
-        var newerH3 = $("<h3>");
-        newerH3.attr("class", "drinkName");
-        newerH3.text(data.drinks[0].strDrink);
-        secondDiv.append(newerH3);
+        secondDiv.attr("class", "grid-y drink-name");
+        drinkInfoDiv.append(secondDiv);
         var newerImg = $("<img>");
         newerImg.attr("src", data.drinks[0].strDrinkThumb);
         newerImg.attr("class", "featured-drink")
         secondDiv.append(newerImg);
-        var drinkInfoDiv = $("<div>");
-        drinkInfoDiv.attr("class", "drink-info");
-        newerDiv.append(drinkInfoDiv);
+        var newerH3 = $("<h3>");
+        newerH3.attr("class", "drinkName");
+        newerH3.text(data.drinks[0].strDrink);
+        drinkInfoDiv.append(newerH3);
         var newH5 = $("<h5>");
         newH5.text("Ingredients:");
         drinkInfoDiv.append(newH5);
@@ -170,20 +170,23 @@ function pageLoad() {
         var newerDiv = $("<div>");
         newerDiv.attr("class", "grid-x align-center")
         $("#container").append(newerDiv);
+        var drinkInfoDiv = $("<div>");
+        drinkInfoDiv.attr("class", "medium-6 drink-info");
+        newerDiv.append(drinkInfoDiv);
         var secondDiv = $("<div>");
-        secondDiv.attr("class", "grid-y column drink-name");
-        newerDiv.append(secondDiv);
-        var newerH3 = $("<h3>");
-        newerH3.attr("class", "drinkName");
-        newerH3.text(data.drinks[0].strDrink);
-        secondDiv.append(newerH3);
+        secondDiv.attr("class", "grid-y drink-name one-of-many");
+        drinkInfoDiv.append(secondDiv);
+        var randomH3 = $("<h3>")
+        randomH3.text("One Of Many Mixes!")
+        secondDiv.prepend(randomH3)
         var newerImg = $("<img>");
         newerImg.attr("src", data.drinks[0].strDrinkThumb);
         newerImg.attr("class", "featured-drink")
         secondDiv.append(newerImg);
-        var drinkInfoDiv = $("<div>");
-        drinkInfoDiv.attr("class", "drink-info");
-        newerDiv.append(drinkInfoDiv);
+        var newerH3 = $("<h3>");
+        newerH3.attr("class", "drinkName");
+        newerH3.text(data.drinks[0].strDrink);
+        drinkInfoDiv.append(newerH3);
         var newH5 = $("<h5>");
         newH5.text("Ingredients:");
         drinkInfoDiv.append(newH5);
