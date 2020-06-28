@@ -27,13 +27,6 @@ body {
 }
 /* Logo Bar */
 
-
-/* Team Bio Images */ 
-.headshot {
-  max-width: 200px;
-  height: auto;
-  border-radius: 50px;
-}
 /* Hero Section */
 .hero-section {
   background: url("assets/imgs/john-fornander-4VYLNi0qeF8-unsplash.jpg") 50% no-repeat;
@@ -82,9 +75,7 @@ body {
 
 /* Drink List Section */
 #product {
-    min-width: 200px;
-    max-width: 200px;
-    height: auto;
+    width: 200px;
     border-radius: 50px;
 }
 .article-row-section {
@@ -157,9 +148,7 @@ body {
 }
 @media print, screen and (min-width: 40em) {
   .article-row-img img {
-    min-width: 200px;
-    max-width: 200px;
-    height: auto;
+    width: 200px;
   }
 }
 @media print, screen and (min-width: 40em) {
@@ -176,19 +165,35 @@ body {
   align-items: center;
   justify-content: center;
 } 
+.enjoy-random{
+  margin-top: 0px;
+  text-decoration: underline;
+}
 .drink-name h3 {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   color: #2c3840;
+}
+/* .drink-info {
+  border: 2px solid #2c3840;
+  border-radius: 10px;
+} */
+.drinkName {
+  padding-top: 10px;
 }
 .featured-drink {
   width: 200px;
   border-radius: 50px;
-  margin-bottom: 20px;
 }
 .drink-info {
 padding: 40px;
 }
 /* Single Drink Info Section */
+
+/* Meet MixMe Icon */
+.meetMixMe img {
+  width: 50px;
+}
+/* Meet MixMe Icon */
 
 /* Bottom Spacer */
 .bottom-spacer {
