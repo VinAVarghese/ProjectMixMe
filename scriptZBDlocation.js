@@ -1,5 +1,5 @@
 
-
+//keyup function allows a user to fire search function by pressing enter and prevents enter from resetting page 
 $("#tempSearchBar").keyup(function(){
     if (event.which == 13) {
 
@@ -7,7 +7,7 @@ $("#tempSearchBar").keyup(function(){
         var apiKey = "280fa1637c0958e223d90cbe4eba1bf8";
         var city = $("#tempSearchBar").val().trim();
         var cityUrl = "https://developers.zomato.com/api/v2.1/cities?q=" + city + "&apikey=" + apiKey;
-    
+    //ajax to call zomato function with searched city
         $.ajax({
             url: cityUrl,
             method: "GET",
@@ -22,7 +22,7 @@ $("#tempSearchBar").keyup(function(){
             var cityId = response.location_suggestions[0].id;
             var apiKey = "280fa1637c0958e223d90cbe4eba1bf8";
             var finalUrl = "https://developers.zomato.com/api/v2.1/search?entity_id=" + cityId + "&entity_type=city&collection_id=432&sort=rating&apikey=" + apiKey;
-    
+    //ajax call to use city info to find collections of locations 
             $.ajax({
                 url: finalUrl,
                 method: "GET",
