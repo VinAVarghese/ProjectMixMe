@@ -2,8 +2,10 @@ var divArray = [];
 var drinkArray = [];
 var meetMixMe = $(".meetMixMe")
 
+//function that generates random drink on pageload 
 pageLoad();
 
+//keyup function allows a user to fire search function by pressing enter and prevents enter from resetting page 
 $("#tempSearchBar").keyup(function () {
     if (event.which == 13) {
         divArray = [];
@@ -14,19 +16,19 @@ $("#tempSearchBar").keyup(function () {
         var ingredient = $("#tempSearchBar").val().trim();
         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" +
             ingredient;
-
+//ajax call to get drink info 
         $.ajax({
             url: queryURL,
             method: "GET"
         }).then(function (response) {
-            //  console.log(response);
+            // this IF statement alerts a user if the value of their input is not adequate for the ajax
             if (response == "") {
                 $("#tempSearchBar").val("Not a valid ingredient, please try again")
                 $("#tempSearchBar").attr("class", "error");
                }  else 
                $("#tempSearchBar").attr("class", "errorFix");
             for (var i = 0; i < response.drinks.length; i++) {
-
+                //For loop that runs to create the divs with drink info 
                 var newDiv = $("<div>");
                 $("#container").append(newDiv);
                 var newArticle = $("<article>");
@@ -55,12 +57,11 @@ $("#tempSearchBar").keyup(function () {
 
                 var drinkId = response.drinks[i].idDrink;
                 drinkArray.push(drinkId)
-                // console.log(drinkId);
             }
+            //click function to initiate search when you click a drink to take you to the full details  
             $(".clickable").on("click", function () {
                 var clickedId = $(this).attr("id");
-                console.log(clickedId);
-
+                //function that takes the idea of first ajax and uses it to search a second ajax call by ID 
                 function getInstructions(num) {
                     var drinkIngredients = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=" + num;
                     $.ajax({
@@ -325,7 +326,7 @@ $("#btnMixMe").on("click submit", function search() {
     });
 });
 
-
+//function to load the random drink 
 function pageLoad() {
     var randomDrink = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
     $.ajax({

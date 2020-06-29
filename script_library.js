@@ -69,7 +69,7 @@ function getDrinks(letters) {
             newDiv.append(drinkName);
             var span = $("<span>");
             span.attr("class", "product-ingri");
-            span.text("Ingridents");
+            span.text("Ingredients");
             newDiv.append(span);
             var ul = $("<ul>");
             ul.attr("class", "product-ul");
