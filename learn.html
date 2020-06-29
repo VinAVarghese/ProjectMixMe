@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MixMe</title>
-  <!-- Links (top to bottom): Favicon, Foundation, Style1 -->
+  <!-- Links (top to bottom): Favicon, FontAwesome, Foundation, Style1 -->
   <link rel="icon" type="image/png" href="assets/imgs/favicon3.png" />
   <script src="https://kit.fontawesome.com/106f23844d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/csshake/1.5.3/csshake-rotate.css"
     integrity="sha256-qb6RbQjtL5q6WnEFeCFmf2PI6e3IJ1Fxsaii8QOZM8Y=" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="style_library.css">
+  <link rel="stylesheet" href="style_game.css">
 </head>
 
 <body>
@@ -21,31 +21,61 @@
   <div class="logo-header">
     <a href="index.html"><img id="logo" src="assets/imgs/mmlogo_white.PNG" alt="" /></a>
   </div>
-  
+
   <!-- Spacer -->
+  <div class="spacer"></div>
 
-
+  <!-- Game Instructions -->
+  <div class="instruct-area grid-x align-center">
+    <div class="zomato-info small-6">
+      <h5 class="locator">MixMemory Game</h5>
+      <p class="instructions">Welcome to the MixMemory game! Here, you'll be presented ingreidents and asked which drink they make.
+        You'll remember how to mix your favorite drinks in no time!</p>
+    </div>
+  </div>
+  
   <!-- Game Section -->
+  <div class="game-area grid-x align-center">
+    <div class="scoreTimer">
+      <h3 id="scoreHolder">Score: <span id="score">0</span></h3>
+      <h3 id="time">Timer: <span id="timer"></span></h3>
+    </div>
+  </div>
+  <div class="grid-x align-center">
+    <div class="container">
+      <div id="question-container" class="hide">
+        <div id="question">Question</div>
+        <div id="answer-buttons" class="btn-grid">
+          <button class="btn">Answer 1</button>
+          <button class="btn">Answer 2</button>
+          <button class="btn">Answer 3</button>
+          <button class="btn">Answer 4</button>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="start-btn" class="start-btn btn">Start</button>
+        <button id="next-btn" class="next-btn btn hide">Next</button>
+      </div>
+      <select id="difficulty" name="difficulty">
+        <option value="easy" selected disabled>Difficulty</option>
+        <option value="easy">Easy</option>
+        <option value="moderate">Moderate</option>
+        <option value="hard">Hard</option>
+      </select>
+      <label for="difficulty" id="theLabel">Choose a level:</label>
+    </div>
+  </div>
 
+  <!-- Bottom Spacer -->
+  <div class="bottom-spacer"></div>
 
   <!-- Fixed Footer Menu -->
-  <!-- <div class="bottom-menu row expanded">
-    <div class="columns text-center">
-      <ul class="menu align-center">
-        <li><a href="">Button</a></li>
-        <li><a href="">Button</a></li>
-        <li><a href="">Button</a></li>
-        <li><a href="">Button</a></li>
-      </ul>
-    </div>
-  </div>   -->
   <div class="bottom-menu grid-x">
     <form action="find.html"><button class="fas fa-map-marker-alt fa-2x"></button></form>
-    <form action="index.html"><button class="fas fa-search fa-2x"> </button></form>
+    <form action="index.html"><button class="fas fa-search fa-2x"></button></form>
     <form action="learn.html"><button class="fas fa-gamepad fa-2x"></button></form>
     <form action="library.html"><button class="fas fa-book-open fa-2x"></button></form>
   </div>
-  <!-- Fixed Footer Menu -->
 
   <!-- Scripts (top to bottom): jQuery, Foundation, Script1 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
@@ -56,5 +86,3 @@
 </body>
 
 </html>
-
-LGA5 GREKI 5k 380FL 1102

@@ -6,6 +6,8 @@ var letterNS = "nopqrs"
 var letterTZ = "tuvwxyz"
 var drinkId = [];
 
+pageLoad();
+
 
 $("#AG").on("click", function () {
     for (let i = 0; i < letterAG.length; i++) {
@@ -67,7 +69,7 @@ function getDrinks(letters) {
             newDiv.append(drinkName);
             var span = $("<span>");
             span.attr("class", "product-ingri");
-            span.text("Ingridents");
+            span.text("Ingredients");
             newDiv.append(span);
             var ul = $("<ul>");
             ul.attr("class", "product-ul");
@@ -105,20 +107,20 @@ function getInstructions(num) {
         var newerDiv = $("<div>");
         newerDiv.attr("class", "grid-x align-center")
         $(singleDrink).append(newerDiv);
+        var drinkInfoDiv = $("<div>");
+        drinkInfoDiv.attr("class", "drink-info");
+        newerDiv.append(drinkInfoDiv);
         var secondDiv = $("<div>");
-        secondDiv.attr("class", "grid-y column drink-name");
-        newerDiv.append(secondDiv);
-        var newerH3 = $("<h3>");
-        newerH3.attr("class", "drinkName");
-        newerH3.text(data.drinks[0].strDrink);
-        secondDiv.append(newerH3);
+        secondDiv.attr("class", "grid-y drink-name");
+        drinkInfoDiv.append(secondDiv);
         var newerImg = $("<img>");
         newerImg.attr("src", data.drinks[0].strDrinkThumb);
         newerImg.attr("class", "featured-drink")
         secondDiv.append(newerImg);
-        var drinkInfoDiv = $("<div>");
-        drinkInfoDiv.attr("class", "drink-info");
-        newerDiv.append(drinkInfoDiv);
+        var newerH3 = $("<h3>");
+        newerH3.attr("class", "drinkName");
+        newerH3.text(data.drinks[0].strDrink);
+        drinkInfoDiv.append(newerH3);
         var newH5 = $("<h5>");
         newH5.text("Ingredients:");
         drinkInfoDiv.append(newH5);
@@ -126,7 +128,7 @@ function getInstructions(num) {
         newUl.attr("class", "ingredients");
         drinkInfoDiv.append(newUl);
         var newLi = $("<li>");
-        newLi.text(data.drinks[0].strIngredient1 + data.drinks[0].strMeasure1);
+        newLi.text(data.drinks[0].strMeasure1 + " " + data.drinks[0].strIngredient1);
         newUl.append(newLi);
         for (var i = 2; i < 16; i++) {
             if (data.drinks[0][`strIngredient${i}`]) {
@@ -135,10 +137,76 @@ function getInstructions(num) {
                     measure = data.drinks[0][`strMeasure${i}`]
                 }
                 var newLi = $("<li>");
-                newLi.text(data.drinks[0][`strIngredient${i}`] + " " + measure);
+                newLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
                 newUl.append(newLi);
             }
         }
+        var newerH5 = $("<h5>");
+        newerH5.text("Glass typically used:");
+        drinkInfoDiv.append(newerH5);
+        var glassType = $("<ul>");
+        glassType.attr("class", "ingredients");
+        drinkInfoDiv.append(glassType);
+        var glassLi = $("<li>");
+        glassLi.text(data.drinks[0].strGlass);
+        glassType.append(glassLi);
+        var instructionsH5 = $("<h5>");
+        instructionsH5.text("Instructions:")
+        drinkInfoDiv.append(instructionsH5);
+        var detailedInstructions = $("<p>");
+        detailedInstructions.attr("class", "instructions");
+        detailedInstructions.text(data.drinks[0].strInstructions);
+        drinkInfoDiv.append(detailedInstructions);
+    });
+}
+
+function pageLoad() {
+    var randomDrink = "https://www.thecocktaildb.com/api/json/v1/1/random.php";
+    $.ajax({
+        url: randomDrink,
+        method: "GET"
+    }).then(function (data) {
+        // console.log(data);
+        var newerDiv = $("<div>");
+        newerDiv.attr("class", "grid-x align-center")
+        $("#container").append(newerDiv);
+        var drinkInfoDiv = $("<div>");
+        drinkInfoDiv.attr("class", "medium-6 drink-info");
+        newerDiv.append(drinkInfoDiv);
+        var secondDiv = $("<div>");
+        secondDiv.attr("class", "grid-y drink-name one-of-many");
+        drinkInfoDiv.append(secondDiv);
+        var randomH3 = $("<h3>")
+        randomH3.text("One Of Many Mixes!")
+        secondDiv.prepend(randomH3)
+        var newerImg = $("<img>");
+        newerImg.attr("src", data.drinks[0].strDrinkThumb);
+        newerImg.attr("class", "featured-drink")
+        secondDiv.append(newerImg);
+        var newerH3 = $("<h3>");
+        newerH3.attr("class", "drinkName");
+        newerH3.text(data.drinks[0].strDrink);
+        drinkInfoDiv.append(newerH3);
+        var newH5 = $("<h5>");
+        newH5.text("Ingredients:");
+        drinkInfoDiv.append(newH5);
+        var newUl = $("<ul>");
+        newUl.attr("class", "ingredients");
+        drinkInfoDiv.append(newUl);
+        var newLi = $("<li>");
+        newLi.text(data.drinks[0].strMeasure1 + " " + data.drinks[0].strIngredient1);
+        newUl.append(newLi);
+        for (var i = 2; i < 16; i++) {
+            if (data.drinks[0][`strIngredient${i}`]) {
+                var measure = ""
+                if(data.drinks[0][`strMeasure${i}`]) {
+                    measure=data.drinks[0][`strMeasure${i}`]
+                } 
+            var newLi = $("<li>");
+            newLi.text(measure + " " + data.drinks[0][`strIngredient${i}`]);
+            newUl.append(newLi);
+            }
+        }                  
         var newerH5 = $("<h5>");
         newerH5.text("Glass typically used:");
         drinkInfoDiv.append(newerH5);

@@ -1,0 +1,32 @@
+/* Team Bio Images */ 
+.headshot {
+    width: 200px;
+    border-radius: 50px;
+}
+@media print, screen and (max-width: 40em) {
+    .headshot {
+        display:block;
+        max-height: 300px;
+        max-width: 200px;
+    }
+}
+
+.vinheadshot {
+    width: 200px;
+    border-radius: 50px;
+}
+
+@media print, screen and (max-width: 40em) {
+    .vinheadshot {
+        display:block;
+        max-width: 200px;
+        max-height: 200px;
+    }
+}
+/*  Team Bio Images */
+
+.Meet-MixMe {
+    margin-top: 20px;
+    text-align: center;
+    text-decoration: underline;
+}
