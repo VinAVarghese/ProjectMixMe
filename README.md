@@ -20,7 +20,7 @@ Stylistically, the four icons in the navigation buttons along the bottom of the 
 ![Locator](assets/imgs/2020-06-27-17-33-11.png)
 
 4. Interactive Game
-![Game Page](gamepage.png)
+![Game Page](assets/imgs/gamepage.png)
 
 5. Team Bio
 ![Meet the Team](assets/imgs/2020-06-27-17-35-29.png)
